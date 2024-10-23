@@ -1,0 +1,31 @@
+Documentation: How Rufus Works
+Installation
+To run Rufus, ensure you have the following dependencies installed:
+pip install selenium transformers faiss-cpu docx validators webdriver-manager torch
+Main.py
+The main.py file serves as the entry point for running Rufus. It contains the logic to initialize the Rufus class and trigger the web data extraction and answer generation process.
+
+Usage
+To utilize Rufus, run the main.py script. This will initiate the process of crawling the specified URL, extracting relevant content, and generating an answer based on the provided question.
+
+Modify main.py: Update the target_url, question, and file_format variables with your desired values.
+
+Run the script:
+python main.py
+Integration into a RAG Pipeline
+Data Collection: Use Rufus to scrape relevant web pages based on specific queries. Rufus will automatically crawl links found on the initial page and gather data from them as well.
+
+Embedding Storage: Store the extracted content using FAISS, enabling fast similarity searches. This is crucial for retrieving the most relevant chunks of text in response to user queries.
+
+Answer Generation: Once relevant chunks are retrieved based on the user's question, they can be fed into the answer generation model. Rufus prepares a prompt that combines the question with the context, which is then processed by the language model.
+
+Output Management: Save the results in the desired format (JSON, DOCX) for easy consumption or further processing in other systems.
+
+Example Workflow
+Start by modifying the parameters in main.py.
+Run the script to initiate the crawling and extraction process.
+Rufus retrieves the relevant data, generates answers, and saves the output in the specified format.
+Conclusion
+Rufus is a versatile tool that addresses the complexities of retrieving and processing web data for RAG agents. By intelligently crawling websites, extracting relevant information, and generating answers, it serves as a valuable asset for anyone looking to leverage web content effectively.
+
+For any questions or further details on the implementation, feel free to reach out!

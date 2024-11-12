@@ -1,7 +1,7 @@
 # main.py
 
 import streamlit as st
-from rufus2 import Rufus
+from rufus import Rufus
 import json
 # Initialize the Rufus class
 rag_system = Rufus()

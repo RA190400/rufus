@@ -60,23 +60,6 @@ python main.py --url <url> --query "<your query>"
 - `--url`: Specify the URL to scrape.  
 - `--query`: Enter your question or prompt for retrieval.  
 
----
-
-## Project Structure  
-
-```
-AI-Driven-Web-Scraping-System/  
-│  
-├── scraping/           # Web scraping logic with Selenium  
-├── retrieval/          # FAISS-based semantic search  
-├── model/              # Integration with Ollama Mistral LLM  
-├── frontend/           # Streamlit-based user interface  
-├── tests/              # Unit and integration tests  
-├── app.py              # Main Streamlit app entry point  
-├── main.py             # CLI entry point  
-├── requirements.txt    # Python dependencies  
-└── README.md           # Project documentation  
-```  
 
 ---
 
